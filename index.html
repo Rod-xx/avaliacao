@@ -1,48 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> <!-- Estabelece que é um html5 -->
+<html lang="pt-BR"> <!-- Estabelece a língua portuguesa brasileira-->
 
-<head>
+<head> <!-- Este é o cabeçalho do documento, e nele são inseridas suas informações.. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação</title>
+    <title>Avaliação</title> <!-- O título que é exibido na barra do navegador ou no guia da página -->
     <link rel="stylesheet" href="avaliacao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-<body>
+<body> <!-- Este é o corpo do documento. -->
 
-    <main>
+    <main> <!-- Parte principal -->
         <div id="moviePoster">
+            <!-- parte lateral inferior esquerda da interfece onde tem a estrela e avaliação. -->
             <div class="omdbrating">
                 <span id="icone"><i class="fa-solid fa-star"></i></span>
 
                 <span id="imdbRating">Score</span>
-            </div>
+            </div> 
         </div>
 
         <div class="description">
-
-            <form id="formSearch" action="">
+            <!-- Parte direita da interface -->
+            <form id="formSearch" action=""> <!-- Formulário que solicita o nome do entreternimento e possui o botão de envio-->
                 <input id="title" type="text" placeholder="Informe o título do filme">
                 <input type="submit" value="Pesquisar">
             </form>
             <div id="descriptionBodyNotFound">
             </div>
-            <div id="descriptionBody">
+            <div id="descriptionBody"> <!--onde estarão as informações sobre o entreternimento procurado.-->
                 <h1 id="movieTitle">Titulo do filme</h1>
                 <p><span class="infoBlue" id="movieYear">ANO</span> <span id="movieGenre">GENERO DO FILME</span> <span
                         class="infoBlue" id="movieRuntime">DURAÇÃO</span></p>
                 <p id="movieInfo">Descrição do filme.</p>
-                <p><strong >Escrito por:</strong> <span id="movieWriter">Nome do escritor</span> </p>
-                <p><strong>Dirigido por:</strong> <span id="movieDirector">Nome do ditetor</span></p>
+                <p> <strong> </strong> <span id="movieWriter">Nome do escritor</span> </p>
+                <p> <strong> </strong> <span id="movieDirector">Nome do ditetor</span></p>
             </div>
 
             
         </div>
     </main>
-
+<!-- ligando o html ao js -->
     <script src="avaliacao.js"></script>
-</body>
+</body> <!-- fim do corpo do html -->
 
-</html>
+</html> <!-- fim do html -->
