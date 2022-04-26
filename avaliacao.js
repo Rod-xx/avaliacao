@@ -2,12 +2,13 @@ function getMovieInfosOMDB(title){
     const url = `https://www.omdbapi.com/?t=${title}&apikey=790af7bc`  
     
 
-    fetch(url)
+    fetch(url) //Permite a busca de informações na API//
     .then(response => response.json())
-    .then(data => {
-
-        if(data.Response == 'False'){
-            descriptionBodyNotFound.textContent = "";
+    .then(data => { 
+//.then Retorna uma Promise//
+//textContent - retorna o conteúdo textual das id's que correspondem a determinadas tags.//
+        if(data.Response == "False"){
+            descriptionBodyNotFound.textContent = "Filme não encontrado!";
             descriptionBodyNotFound.style.marginBottom = '30px'
             movieTitle.textContent = ""
             movieYear.textContent = ""
@@ -28,8 +29,8 @@ function getMovieInfosOMDB(title){
             movieRuntime.textContent = data.Runtime
             imdbRating.textContent = data.imdbRating
             movieInfo.textContent = data.Plot
-            movieWriter.textContent = data.Writer
-            movieDirector.textContent = data.Director
+            movieWriter.textContent = "Escrito por:" + data.Writer
+            movieDirector.textContent = "Dirigido por:" + data.Director
             moviePoster.style.backgroundImage = `url(${data.Poster})`
         }
         
@@ -37,7 +38,7 @@ function getMovieInfosOMDB(title){
      })  
 }
 
-var form = document.getElementById('formSearch');
+var form = document.getElementById('formSearch'); //Foi declarado que a variável form == elementos do <form>, que foram acessados usando getElementById():, os inputs.
 var title = document.getElementById('title');
 
 form.addEventListener('submit', function(e) {
